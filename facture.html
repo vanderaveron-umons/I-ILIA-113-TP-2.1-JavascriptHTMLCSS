@@ -1,0 +1,90 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script type="text/javascript" src="code.js"></script>
+</head>
+<body>
+<div class="header">
+    <h1>Facture</h1>
+    <p>Bienvenue chez Nous.</p>
+</div>
+<div class="topnav">
+    <a href="#">Link</a>
+    <a href="#">Link</a>
+    <a href="#">Link</a>
+</div>
+<div class="row">
+    <div class="column side">
+        <h2>Fournisseur</h2>
+        <form action="#" method="post">
+            <fieldset>
+                <legend> Fournisseur : ?</legend>
+                <select>
+                    <option value="f1">Fournisseur 1</option>
+                    <option value="f2">Fournisseur 2</option>
+                    <option value="f3">Fournisseur 3</option>
+                    <option value="f4">Fournisseur 4</option>
+                </select>
+            </fieldset>
+        </form>
+    </div>
+    <div class="column middle">
+        <h2>Formulaire</h2>
+        <form action="#" method="post" onsubmit="return mfValidation(this);">
+            <fieldset>
+                <legend> Information : ?</legend>
+                <input type="radio" name="type" value="prof" checked onclick="return professionnel(this);"> Professionel<br>
+                <input type="radio" name="type" value="perso" onclick="return personnel(this);"> Personnel&nbsp;&nbsp;
+                <br>
+                <div id="tva">
+                    N° TVA:<br>
+                    <input type="text" name="tva"><br><br>
+                </div>
+                Prénom :<br>
+                <input type="text" name="firstname"><br><br>
+                Nom :<br>
+                <input type="text" name="lastname">
+                <br><br>
+                <div id="gender">
+                </div>
+                Email :<br>
+                <input type="text" name="mail">
+                <br><br>
+                N° Téléphone :<br>
+                <input type="text" name="phone">
+                <br><br>
+                Adresse :<br>
+                <input type="textarea" name="adresse">
+                <br><br>
+                Province :<br>
+                <select name="region" id="region" onchange="return selectionville(this);">
+                    <option value="">....</option>
+                    <option value="hainaut">Hainaut</option>
+                    <option value="bw">Brabant Wallon</option>
+                    <option value="liege">Liège</option>
+                    <option value="namur">Namur</option>
+                    <option value="lux">Luxembourg</option>
+                </select>
+                <br><br>
+                Ville :<br>
+                <div id="villediv">
+                    <input type="text" name="ville">
+                </div>
+                <br><br>
+                Code postal :<br>
+                <div id="codepostal">
+                    <input type="text" name="code">
+                </div>
+                <br><br>
+
+                <br>
+                <input type="submit"><input type="reset">
+            </fieldset>
+        </form>
+    </div>
+
+
+</div>
+</body>
+<html>
