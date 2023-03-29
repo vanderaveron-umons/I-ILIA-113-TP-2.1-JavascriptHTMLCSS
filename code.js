@@ -115,7 +115,10 @@ function mfValidation(f) {
     if (code == "") {
         errorMsg += "Le code postal est manquant\n";
         ok = false;
-    }
+    }  else if (!code.match(regex2)) {
+    errorMsg += "Le format du code postal n'est pas correct\n";
+    ok = false;
+}
 
 
     if (ok == false) {
